@@ -9,11 +9,31 @@ function Register() {
   const [cpf, setCpf] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const data = {
+    email: {email},
+    cpf: {cpf},
+    password: {password}
+  };
+
+  const BancoDeSangueURL = "https://parseapi.back4app.com/classes/Doador";
+const headers = {
+  "X-Parse-Application-Id": "c40m1lDSqpDCJL28hpsKVJdY5f9dMAuG7NaNBcao",
+  "X-Parse-REST-API-Key": "R1iG6nDlRxEX7ZYqhN8na01vkp8JbeJfc3DeKVdC",
+};
+const headersJson = {
+  ...headers,
+  "Content-Type": "application/json",
+};
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (email && cpf && password && confirmPassword && password === confirmPassword) {
       // Lógica de registro aqui
+      const response = await fetch(BancoDeSangueURL, {
+    method: "POST",
+    headers: headersJson,
+    body: JSON.stringify(data),
+  });
       navigate('/home');
     } else {
       alert('Por favor, preencha todos os campos corretamente.');
@@ -42,7 +62,7 @@ function Register() {
             <label className="confirm-password-label">Confirmar Senha:</label> 
             <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="confirm-password-input" /> 
           </div>
-          <button type="submit" disabled={!email || !cpf || !password || !confirmPassword || password !== confirmPassword} className="submit-button">Cadastrar</button> 
+          <button id="Register" type="submit" disabled={!email || !cpf || !password || !confirmPassword || password !== confirmPassword} className="submit-button">Cadastrar</button> 
         </form>
       </div>
     </div>
