@@ -1,0 +1,37 @@
+.buttons-container {
+  position: absolute;
+  top: 20px; 
+  right: 20px;
+}
+
+.buttonLogin,
+.buttonRegister {
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: white;
+  box-shadow: #0000000d 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  margin-right: 10px;
+}
+
+.buttonLogin:hover,
+.buttonRegister:hover {
+  letter-spacing: 3px;
+  background-color: #ffff;
+  color: #000000;
+  box-shadow: #ffff 0px 7px 29px 0px;
+}
+
+.buttonLogin:active,
+.buttonRegister:active {
+  letter-spacing: 3px;
+  background-color: #dc143c;
+  color: #fff;
+  box-shadow: #fff 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}

@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.news, .charts {
+  text-align: center;
+}
+
+.imgcarousel{
+  width: 100%;
+  height: 800px;
+}

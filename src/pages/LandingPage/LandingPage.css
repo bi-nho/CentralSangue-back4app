@@ -1,0 +1,36 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    text-align: center;
+  }
+  
+  .auth-navbar-container {
+    margin-bottom: 20px;
+  }
+  
+  .BemVindo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    animation: digitar 5s steps(40) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+  }
+  
+  @keyframes digitar {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .Texto1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+  }
+  
